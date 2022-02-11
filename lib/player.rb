@@ -11,9 +11,10 @@ class Player
     @points = 120
   end
 
-  def attack(opponent)
-    opponent.wounded
-  end
+  #extract this into Game
+  # def attack(opponent)
+  #   opponent.wounded
+  # end
 
   def wounded
     @points -= 10
