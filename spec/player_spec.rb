@@ -15,9 +15,4 @@ describe Player do
       expect(player1.points).to eq 120
     end
   end
-  
-    it 'attacks another player' do
-      player1.attack(player2)
-      expect(player2.points).to eq 110
-    end
 end
