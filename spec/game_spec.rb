@@ -3,8 +3,19 @@ require_relative '../lib/player.rb'
 
 describe Game do 
     subject(:game) {described_class.new("Ben", "Francesco") }
-    player = Player.new("Ben")
-    it { is_expected.to respond_to(:player).with(2).arguments }
+
+    describe "#player_1" do
+      it 'retrieves first player' do
+        expect(game.player1).to eq "Ben"
+      end
+    end
+
+    describe "#player_2" do
+      it 'retrieves second player' do
+        expect(game.player2).to eq "Francesco"
+      end
+    end
+    
 
     describe "#attack" do
         it 'attacks another player' do
