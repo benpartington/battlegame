@@ -34,6 +34,7 @@ class Battle < Sinatra::Base
     @player1name = $player1.name
     @player2name = $player2.name
     $player1.attack($player2) 
+    @player2hp = $player2.points
     erb(:attack)
     # redirect('/play')
   end
