@@ -36,7 +36,6 @@ class Battle < Sinatra::Base
     $player1.attack($player2) 
     @player2hp = $player2.points
     erb(:attack)
-    # redirect('/play')
   end
 
   run! if app_file == $0
