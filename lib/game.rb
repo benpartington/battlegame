@@ -1,19 +1,12 @@
 require_relative './player.rb'
 
-class Game 
-  @name = ""
+class Game
+    def initialize(player1, player2)
+        @player1 = player1 
+        @player2 = player2
+    end 
 
-  def add_players 
-    player1 = Player.new(@name)
-    player2 = Player.new(@name)
-  end
-
-  def attack(opponent)
-    opponent.wounded
-  end
-
-  # def wounded
-  #   @points -= 10
-  # end
-
+    def attack(opponent)
+        opponent.wounded
+    end
 end 

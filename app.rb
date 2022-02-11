@@ -33,7 +33,7 @@ class Battle < Sinatra::Base
   post '/attack' do
     @player1name = $player1.name
     @player2name = $player2.name
-    game = Game.new
+    game = Game.new($player1, $player2)
     game.attack($player2) 
     @player2hp = $player2.points
     erb(:attack)
