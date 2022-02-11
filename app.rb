@@ -26,12 +26,16 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  post '/attacked' do
+    redirect('/play')
+  end
+
   post '/attack' do
     @player1name = $player1.name
     @player2name = $player2.name
     $player1.attack($player2) 
-    redirect('/play')
-    # erb(:attack)
+    erb(:attack)
+    # redirect('/play')
   end
 
   run! if app_file == $0
